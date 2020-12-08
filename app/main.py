@@ -9,6 +9,6 @@ def hi():
     return 'OK'
 
 
-app.register_blueprint(health.router, url_prefix='/health')
+app.register_blueprint(health.router, url_prefix='/')
 app.register_blueprint(calc.router, url_prefix='/calc')
 
