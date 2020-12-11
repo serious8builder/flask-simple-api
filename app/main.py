@@ -1,5 +1,10 @@
+import os
+
 from flask import Flask
 from .router import health, calc
+from dotenv import load_dotenv
+
+load_dotenv(verbose=True)
 
 app = Flask(__name__)
 
@@ -11,4 +16,3 @@ def hi():
 
 app.register_blueprint(health.router, url_prefix='/')
 app.register_blueprint(calc.router, url_prefix='/calc')
-
